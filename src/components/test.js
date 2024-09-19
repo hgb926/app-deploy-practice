@@ -6,7 +6,7 @@ const Test = () => {
     useEffect( () => {
 
          async function getText() {
-            let response = await fetch('http://localhost:8080/api/message');
+            let response = await fetch('http://3.34.200.47:8080/api/message');
             let json = await response.text()
             setText(json);
         }
@@ -14,7 +14,7 @@ const Test = () => {
     }, []);
 
     return (
-        <div>
+        <div style={{marginTop: '200px'}}>
             {text}
         </div>
     );
